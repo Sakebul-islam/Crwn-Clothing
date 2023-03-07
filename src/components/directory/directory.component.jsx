@@ -1,6 +1,6 @@
 import CategoryItem from "../category-item/category-item.component";
 
-import "./directory.component.scss";
+import "./directory.style.scss";
 
 const Directory = ({ categories }) => {
   return (
