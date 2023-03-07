@@ -1,7 +1,7 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,8 +15,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
- 
-a{
+
+a {
   text-decoration: none;
   color: #000;
+}
+
+.page-error {
+  height: 100vh;
+  background: rgba(255, 69, 0, .7);
+  display: grid;
+  place-content: center;
+
+  h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+  }
 }

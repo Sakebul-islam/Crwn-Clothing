@@ -15,6 +15,14 @@ function App() {
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
         <Route path="sign-in" element={<SignIn />} />
+        <Route
+          path="*"
+          element={
+            <div className="page-error">
+              <h1>Page Does not Exist !!!</h1>
+            </div>
+          }
+        />
       </Route>
     </Routes>
   );
