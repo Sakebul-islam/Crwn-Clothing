@@ -7,6 +7,8 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
+  signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
@@ -50,11 +52,8 @@ export const createUserDocumentFromAuth = async (
   if (!userAuth) return;
 
   const useDocRef = doc(db, "users", userAuth.uid);
-  console.log("User Documant Referance : ", useDocRef);
 
   const userSnapshort = await getDoc(useDocRef);
-  console.log("User Documant Snapshort : ", userSnapshort);
-  console.log(userSnapshort.exists());
 
   // If User Data Does not exist
   // create / set the document with the data from userAuth in my collection
@@ -91,3 +90,11 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await signInWithEmailAndPassword(auth, email, password);
 };
+
+// ===============================================================================
+export const signOutUser = async () => signOut(auth);
+
+// ===============================================================================
+
+export const onAuthAtateChangeListener = (callback) =>
+  onAuthStateChanged(auth, callback);

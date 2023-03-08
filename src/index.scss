@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  padding: 20px 40px;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,13 +24,17 @@ a {
 
 .page-error {
   height: 100vh;
-  background: rgba(255, 69, 0, .7);
+  background: rgba(255, 0, 0, .4);
   display: grid;
   place-content: center;
 
   h1 {
     font-size: 40px;
-    color: #fff;
+    color: #fafafa;
     font-weight: 700;
+  }
+
+  span {
+    color: red;
   }
 }

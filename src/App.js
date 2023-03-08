@@ -3,10 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./routes/home/home.component";
 import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
-
-const Shop = () => {
-  return <h1>I am the shop Page</h1>;
-};
+import Shop from "./routes/shop/shop.component";
 
 function App() {
   return (
@@ -19,7 +16,9 @@ function App() {
           path="*"
           element={
             <div className="page-error">
-              <h1>Page Does not Exist !!!</h1>
+              <h1>
+                Page Does not Exist <span>⚠</span>
+              </h1>
             </div>
           }
         />
