@@ -2,23 +2,32 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 400px;
     align-items: center;
-    position: relative;
+    background: #ddd;
+
+    &-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
 
     img {
         width: 100%;
-        height: 95%;
+        height: auto;
         object-fit: cover;
-        margin-bottom: 5px;
     }
 
     button {
         width: 80%;
         opacity: 0.7;
         position: absolute;
-        top: 255px;
-        display: none;
+        bottom: -150px;
+        transform: scale(0);
+        transition: all .5s ease;
     }
 
     &:hover {
@@ -28,24 +37,17 @@
 
         button {
             opacity: 0.85;
-            display: flex;
+            bottom: 30px;
+            transform: scale(1);
         }
     }
 
     .footer {
         width: 100%;
-        height: 5%;
         display: flex;
         justify-content: space-between;
         font-size: 18px;
-
-        .name {
-            width: 90%;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            width: 10%;
-        }
+        padding: 10px 15px;
     }
 }
+
