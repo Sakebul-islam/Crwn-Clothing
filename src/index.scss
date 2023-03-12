@@ -21,20 +21,3 @@ a {
   text-decoration: none;
   color: #000;
 }
-
-.page-error {
-  height: 100vh;
-  background: rgba(255, 0, 0, .4);
-  display: grid;
-  place-content: center;
-
-  h1 {
-    font-size: 40px;
-    color: #fafafa;
-    font-weight: 700;
-  }
-
-  span {
-    color: red;
-  }
-}

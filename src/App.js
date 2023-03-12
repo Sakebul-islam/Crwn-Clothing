@@ -11,22 +11,23 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="shop/*" element={<Shop />} />
         <Route path="auth" element={<Authentication />} />
         <Route path="checkout" element={<Checkout />} />
-        <Route
-          path="*"
-          element={
-            <div className="page-error">
-              <h1>
-                Page Does not Exist <span>⚠</span>
-              </h1>
-            </div>
-          }
-        />
       </Route>
     </Routes>
   );
 }
 
 export default App;
+
+{/* <Route
+  path="*"
+  element={
+    <div className="page-error">
+      <h1>
+        Page Does not Exist <span>⚠</span>
+      </h1>
+    </div>
+  }
+/> */}
