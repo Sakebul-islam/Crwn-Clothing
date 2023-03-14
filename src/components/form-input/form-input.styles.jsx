@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const subColor = "gray";
+const subColor = "grey";
 const mainColor = "black";
 
 const shrinkLabelStyles = css`
@@ -39,7 +39,7 @@ export const Input = styled.input`
   }
 
   &:focus ~ ${FormInputLabel} {
-    ${shrinkLabelStyles}
+    ${shrinkLabelStyles};
   }
 `;
 

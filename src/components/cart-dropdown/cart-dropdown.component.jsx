@@ -12,7 +12,7 @@ import {
   CartItems,
 } from "./cart-dropdown.styles";
 
-const CardDropdown = () => {
+const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
   const navigate = useNavigate();
 
@@ -26,13 +26,12 @@ const CardDropdown = () => {
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
         ) : (
-          <EmptyMessage>Your cart is Enpty !</EmptyMessage>
+          <EmptyMessage>Your cart is empty</EmptyMessage>
         )}
       </CartItems>
-
-      <Button onClick={goToCheckoutHandler}>Go TO CHECKOUT</Button>
+      <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </CartDropdownContainer>
   );
 };
 
-export default CardDropdown;
+export default CartDropdown;

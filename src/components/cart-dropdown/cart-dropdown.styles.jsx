@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import {
   BaseButton,
   GoogleSignInButton,
@@ -22,40 +23,17 @@ export const CartDropdownContainer = styled.div`
   ${GoogleSignInButton},
   ${InvertedButton} {
     margin-top: auto;
-    padding: 0 20px;
   }
 `;
 
 export const EmptyMessage = styled.span`
   font-size: 18px;
-  /* margin: 50px auto; */
-  height: 100%;
-  display: grid;
-  place-content: center;
+  margin: 50px auto;
 `;
 
 export const CartItems = styled.div`
   height: 240px;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-    background-clip: content-box;
-    border-radius: 8px;
-    // border: 3px solid #f1f1f1;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+  overflow: scroll;
 `;

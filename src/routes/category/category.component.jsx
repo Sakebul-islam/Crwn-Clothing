@@ -7,7 +7,7 @@ import { CategoriesContext } from "../../contexts/categories.context";
 
 import { CategoryContainer, Title } from "./category.styles";
 
-const Category = () => {
+const  Category = () => {
   const { category } = useParams();
   const { categoriesMap } = useContext(CategoriesContext);
   const [products, setProducts] = useState(categoriesMap[category]);
