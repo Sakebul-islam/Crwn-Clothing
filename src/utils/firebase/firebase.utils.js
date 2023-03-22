@@ -26,7 +26,7 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAbqCuoAXk6ueDFFvGWGWL8rdHSlopm7ZU",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "crwn-clothing-db-22580.firebaseapp.com",
   projectId: "crwn-clothing-db-22580",
   storageBucket: "crwn-clothing-db-22580.appspot.com",
@@ -73,12 +73,7 @@ export const getCategoriesAndDocuments = async () => {
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
-  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
-    const { title, items } = docSnapshot.data();
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {});
-  return categoryMap;
+  return querySnapshot.docs.map((docSnapShort) => docSnapShort.data());
 };
 // ===============================================================================
 

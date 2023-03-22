@@ -6,7 +6,8 @@ import {
   Preview,
   Title,
   CategoryPreviewContainer,
-s} from "./category-preview.styles";
+  s,
+} from "./category-preview.styles";
 
 import React from "react";
 
